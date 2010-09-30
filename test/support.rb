@@ -13,13 +13,13 @@ module Rails
   def self.env
     @_env ||= ActiveSupport::StringInquirer.new("development")
   end
-  
+
   def self.env=(env)
     @_env = env
   end
 end
 
-def environment(env) 
+def environment(env)
   Rails.env = ActiveSupport::StringInquirer.new(env.to_s)
   yield
 end

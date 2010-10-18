@@ -1,8 +1,9 @@
 # Jquery_tag
-a Rails Helper for togglin' between a local jquery.js file `located in /public/javascripts/jquery.js` or the hosted script on Google's CDN.
+a Rails Helper for togglin' between a local jquery.js file located in /public/javascripts/jquery.js or the hosted script on Google's CDN.
+Also supports the same behaviour for a local jquery-ui.js file or the CDN version.
 
 ## Installation
-`gem jquery_tag` + `bundle install`
+Just add the `jquery_tag` to your Gemfile and run `bundle install`
 
 ## Usage
 Inside your views
@@ -11,6 +12,8 @@ Inside your views
 
 Accepted options:
 
-    :version          # Overrides the script version on the CDN URL. Defaults do '1.4.2'
+    :version          # Overrides the script version on the CDN URL. Defaults do '1.4.3'
     :file             # Path for the local script. Defaults do 'jquery.js'
-    :args             # Any other arguments that will be passed to the javascript_include_tag helper
+    :ui               # Loads the jquery-ui file. Accepts a true value for loading a 'jquery-ui.js' file or a String for the local path.
+
+Any other arguments will be passed along to the `javascript_include_tag` helper.

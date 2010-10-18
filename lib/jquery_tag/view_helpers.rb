@@ -14,7 +14,7 @@ module Jquery
      private
      def jquery_file(path, version)
        path ||= 'jquery.js'
-       version ||= '1.4.2'
+       version ||= '1.4.3'
        Rails.env.production? ? "http://ajax.googleapis.com/ajax/libs/jquery/#{version}/jquery.min.js" : path
      end
      

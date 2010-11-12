@@ -46,7 +46,7 @@ describe JqueryTag::ViewHelpers do
     end
 
     it "uses the google CDN path for the jquery ui script" do
-      expects_include_with ['http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js']
+      expects_include_with ['http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js']
       jquery_tag :ui => true
     end
   end

@@ -19,7 +19,7 @@ module JqueryTag
 
    def jquery_ui_file(path)
      path = path.is_a?(String) ? path : "jquery-ui.js"
-     Rails.env.production? ? 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js' : path
+     Rails.env.production? ? 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js' : path
    end
   end
 end

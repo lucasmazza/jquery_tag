@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jquery_tag (0.0.2)
+    jquery_tag (0.1.0)
 
 GEM
   remote: http://rubygems.org/

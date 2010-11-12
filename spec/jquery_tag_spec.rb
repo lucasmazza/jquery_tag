@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Jquery::Tag::ViewHelpers do
-  include Jquery::Tag::ViewHelpers
+describe JqueryTag::ViewHelpers do
+  include JqueryTag::ViewHelpers
 
   context "development" do
     before { development! }

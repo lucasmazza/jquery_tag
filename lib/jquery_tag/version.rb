@@ -1,5 +1,3 @@
-module Jquery
-  module Tag
-    VERSION = "0.0.2"
-  end
+module JqueryTag
+  VERSION = "0.0.2"
 end

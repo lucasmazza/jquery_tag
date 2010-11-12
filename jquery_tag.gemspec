@@ -3,7 +3,7 @@ require File.expand_path("../lib/jquery_tag/version", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "jquery_tag"
-  s.version     = Jquery::Tag::VERSION
+  s.version     = JqueryTag::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Lucas Mazza"]
   s.email       = ["luc4smazza@gmail.com"]

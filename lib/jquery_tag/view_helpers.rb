@@ -14,13 +14,13 @@ module JqueryTag
    def jquery_file(path, version)
      path ||= 'jquery.js'
      version ||= '1.4.4'
-     Rails.env.production? ? "http://ajax.googleapis.com/ajax/libs/jquery/#{version}/jquery.min.js" : path
+     Rails.env.production? ? "//ajax.googleapis.com/ajax/libs/jquery/#{version}/jquery.min.js" : path
    end
 
    def jquery_ui_file(path)
      path = path.is_a?(String) ? path : "jquery-ui.js"
      version = '1.8.6'
-     Rails.env.production? ? "http://ajax.googleapis.com/ajax/libs/jqueryui/#{version}/jquery-ui.min.js" : path
+     Rails.env.production? ? "//ajax.googleapis.com/ajax/libs/jqueryui/#{version}/jquery-ui.min.js" : path
    end
   end
 end

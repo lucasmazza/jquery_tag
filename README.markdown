@@ -12,7 +12,7 @@ Inside your views
 
 Accepted options:
 
-    :version          # Overrides the script version on the CDN URL. Defaults do '1.4'
+    :version          # Overrides the script version on the CDN URL. Defaults do '1.4.4'
     :file             # Path for the local script. Defaults do 'jquery.js'
     :ui               # Loads the jquery-ui file. Accepts a true value for loading a 'jquery-ui.js' file or a String for the local path.
 

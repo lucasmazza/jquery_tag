@@ -5,7 +5,8 @@ Also supports the same behaviour for a local jquery-ui.js file or the CDN versio
 To know more about the benefits of using a CDN for your common Javascript frameworks, check [this Chris Coyier post](http://css-tricks.com/google-cdn-naming/) at [CSS-Tricks](http://css-tricks.com).
 
 ## Installation
-Just add the `jquery_tag` to your Gemfile and run `bundle install`
+Just add the `jquery_tag` to your Gemfile and run `bundle install`.
+To download the latest jQuery scripts, check the [jquery-rails](https://github.com/indirect/jquery-rails) gem.
 
 ## Usage
 Inside your views

@@ -13,7 +13,7 @@ module JqueryTag
    private
    def jquery_file(path, version)
      path ||= 'jquery.js'
-     version ||= '1.4.4'
+     version ||= '1.5.0'
      Rails.env.production? ? "//ajax.googleapis.com/ajax/libs/jquery/#{version}/jquery.min.js" : path
    end
 

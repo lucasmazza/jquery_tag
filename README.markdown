@@ -21,7 +21,7 @@ It accepts a some configuration options by using the following symbols:
 
 Any other arguments will be passed along to the `javascript_include_tag` helper, if inside a Rails application. The [Sinatra Helper](https://github.com/lucasmazza/jquery-tag/blob/master/lib/jquery_tag/helpers/sinatra_helper.rb) currently ignores any extra option.
 
-## Sinatra
+## Sinatra (Not released yet)
 To use the `jquery_tag` on your [Sinatra](http://www.sinatrarb.com/) applications, just include the `JqueryTag::SinatraHelper` on your application
 
     require 'jquery_tag' # if your not using Bundler.

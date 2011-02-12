@@ -17,7 +17,7 @@ Accepted options:
 
     :version          # Overrides the script version on the CDN URL. Defaults do '1.5.0'
     :file             # Path for the local script. Defaults do 'jquery.js'
-    :ui               # Loads the jquery-ui file. Accepts a true value for loading a 'jquery-ui.js' file or a String for the local path.
+    :ui               # Loads jQuery UI. Accepts a true value for loading a 'jquery-ui.js' file or a String for the local path.
 
 Any other arguments will be passed along to the `javascript_include_tag` helper.
 

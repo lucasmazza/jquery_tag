@@ -1,4 +1,4 @@
-module JqueryTag
+module JqueryTag # :nodoc:
   ## +jQueryTag::Helper+ is the abstract base for real Helper module
   ## that should be used.
   ##

@@ -1,4 +1,4 @@
-module JqueryTag
+module JqueryTag # :nodoc:
   ## The Helper implementation for +Ruby on Rails+ applications.
   ## Will be included on +ActionView::Base+ automatically on gem loading.
   module RailsHelper

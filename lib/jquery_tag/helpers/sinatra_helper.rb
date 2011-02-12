@@ -1,4 +1,4 @@
-module JqueryTag
+module JqueryTag # :nodoc:
   ## The Helper implementation for +Sinatra+ applications.
   ## you should manually include this Module as a helper inside your application
   ##  class MyApp < Sinatra::Base

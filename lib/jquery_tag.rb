@@ -1,3 +1,5 @@
-require 'jquery_tag/view_helpers'
+require 'jquery_tag/helper'
+require 'jquery_tag/helpers/rails_helper'
+# require 'jquery_tag/helpers/sinatra_helper'
 
-ActionView::Base.send(:include, JqueryTag::ViewHelpers)
+ActionView::Base.send(:include, JqueryTag::RailsHelper) if defined? Rails

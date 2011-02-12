@@ -4,11 +4,18 @@ module Rails
 end
 
 module SpecHelper
+
+  def settings
+    @_settings ||= mock
+  end
+
   def production!
+    settings.stub(:environment) { :production }
     Rails.stub_chain(:env, :production?) { true }
   end
 
   def development!
+    settings.stub(:environment) { :development }
     Rails.stub_chain(:env, :production?) { false }
   end
 

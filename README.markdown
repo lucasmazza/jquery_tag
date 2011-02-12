@@ -20,3 +20,16 @@ Accepted options:
     :ui               # Loads the jquery-ui file. Accepts a true value for loading a 'jquery-ui.js' file or a String for the local path.
 
 Any other arguments will be passed along to the `javascript_include_tag` helper.
+
+## Sinatra
+To use the `jquery_tag` on your [Sinatra](http://www.sinatrarb.com/) applications, just include the `JqueryTag::SinatraHelper` on your application
+
+    require 'jquery_tag' # if your not using Bundler.
+
+    class Application < Sinatra::Base
+      helpers do
+        include JqueryTag::SinatraHelper
+      end
+    end
+
+Just call the `jquery_tag` helper inside your views or layouts, as in the example above. Your local scripts should be located inside a `./public/javascript` folder (or whatever the Sinatra public path is configurated on your application).

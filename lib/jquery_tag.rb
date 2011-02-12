@@ -1,6 +1,6 @@
 require 'jquery_tag/helper'
 require 'jquery_tag/helpers/rails_helper'
-# require 'jquery_tag/helpers/sinatra_helper'
+require 'jquery_tag/helpers/sinatra_helper'
 
 module JqueryTag
   ## @return [String] the current (mostly latest) version of jQuery.

@@ -1,3 +1,3 @@
 module JqueryTag #:nodoc:
-  VERSION = "0.1.3" # :nodoc:
+  VERSION = "0.2.0" # :nodoc:
 end

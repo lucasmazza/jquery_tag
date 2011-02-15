@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby -*-
+require 'jquery_tag/installer'
+
+JqueryTag::Installer.new(ARGV.dup).start

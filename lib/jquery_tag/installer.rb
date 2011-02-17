@@ -2,7 +2,9 @@ require 'jquery_tag'
 require 'optparse'
 require 'open-uri'
 
-module JqueryTag
+module JqueryTag #:nodoc:
+  # +JqueryTag::Installer+ is the class called by the +jquery_tag+ command line
+  # to download the latest version of the jQuery script to your public/javascripts folder.
   class Installer
 
     attr_reader :path, :version, :arguments
@@ -13,6 +15,8 @@ module JqueryTag
       @arguments = arguments
     end
 
+    # Parses the arguments given by arguments array using +OptionParser+
+    # and downloads the script file.
     def start
       parse!
       run

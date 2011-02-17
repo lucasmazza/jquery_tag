@@ -3,7 +3,7 @@ require 'spec_helper'
 describe JqueryTag::SinatraHelper do
   include JqueryTag::SinatraHelper
 
-  context "development" do
+  context "in development environment" do
     before { development! }
 
     it "renders a local jquery.js file" do
@@ -29,7 +29,7 @@ describe JqueryTag::SinatraHelper do
     end
   end
 
-  context "production" do
+  context "in production environment" do
     before { production! }
 
     it "uses the google CDN path" do

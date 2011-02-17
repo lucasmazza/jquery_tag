@@ -1,12 +1,13 @@
 # Jquery_tag
-A Helper gem for both Rails and Sinatra for togglin' between a local jquery.js file or the hosted script on Google's CDN based on your application environment, avoiding network dependency during development and bandwith usage when your application goes live.
-It also supports the same behaviour for a loading the jQuery UI script.
+A Helper gem for both Rails and Sinatra for toggling between a local jquery.js file or the hosted script on Google's CDN based on your application environment, avoiding network dependency during development and bandwidth usage when your application goes live.
+It also supports the same behavior for a loading the jQuery UI script.
 
 To know more about the benefits of using a CDN for your common Javascript frameworks, check [this Chris Coyier post](http://css-tricks.com/google-cdn-naming/) at [CSS-Tricks](http://css-tricks.com).
 
 ## Installation
-If you're using [Bundler](http://gembundler.com), just add the `jquery_tag` to your Gemfile and run `bundle install`. If not, `gem install jquery_tag` and require it inside your application.
-With Rails applications, to download the latest jQuery scripts, check the [jquery-rails](https://github.com/indirect/jquery-rails) gem.
+If you're using [Bundler](http://gembundler.com), just add the `jquery_tag` to your Gemfile and run `bundle install`. If not, `gem install jquery_tag` and `require 'jquery_tag'` inside your application code.
+
+To download the latest jQuery script to your application just run `jquery_tag` command inside your Terminal and the script will be downloaded to `public/javascripts/jquery.js`. You can check the available options running it with the `-h` flag.
 
 ## Usage
 Inside your views, you can just call the `jquery_tag` method.
@@ -21,7 +22,7 @@ It accepts a some configuration options by using the following symbols:
 
 Any other arguments will be passed along to the `javascript_include_tag` helper, if inside a Rails application. The [Sinatra Helper](https://github.com/lucasmazza/jquery-tag/blob/master/lib/jquery_tag/helpers/sinatra_helper.rb) currently ignores any extra option.
 
-## Sinatra (Not released yet)
+## Sinatra
 To use the `jquery_tag` on your [Sinatra](http://www.sinatrarb.com/) applications, just include the `JqueryTag::SinatraHelper` on your application
 
     require 'jquery_tag' # if your not using Bundler.
@@ -32,4 +33,4 @@ To use the `jquery_tag` on your [Sinatra](http://www.sinatrarb.com/) application
       end
     end
 
-Just call the `jquery_tag` helper inside your views or layouts, as in the example above. Your local scripts should be located inside a `./public/javascripts/` folder (or whatever the Sinatra public path is configurated on your application).
+Just call the `jquery_tag` helper inside your views or layouts, as in the example above. Your local scripts should be located inside a `./public/javascripts/` folder (or whatever the Sinatra public path is configured on your application).

@@ -11,9 +11,14 @@ describe JqueryTag::RailsHelper do
       jquery_tag
     end
 
+    it "delegates any other arguments and options" do
+      expects_include_with ['jquery.js', {:cached => true}]
+      jquery_tag :cached => true
+    end
+
     it "delegates any other arguments" do
-      expects_include_with ['jquery.js', 'application.js']
-      jquery_tag 'application.js'
+      expects_include_with ['jquery.js', 'other.js', {:cached => true}]
+      jquery_tag 'other.js', :cached => true
     end
 
     it "accepts a different path for the local jquery file" do

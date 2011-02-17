@@ -30,16 +30,28 @@ module JqueryTag # :nodoc:
     ## Any other argument will be delivered to the +javascript_tag+ method.
     ##
     ## @return [String] the html tags to include scripts
-    def jquery_tag(*args)
-      options = args.first.is_a?(Hash) ? args.pop : {}
+    def jquery_tag(*arguments)
+      options = extract_options(arguments)
+      paths = []
+      paths << jquery_file(options[:file], options[:version])
+      paths << jquery_ui_file(options[:ui]) if options[:ui]
 
-       paths = [jquery_file(options[:file], options[:version])]
-       paths << jquery_ui_file(options[:ui]) if options[:ui]
-
-       javascript_tag paths, args
+      javascript_tag(paths, arguments)
     end
 
     private
+
+    def extract_options(arguments)
+      keys = [:file, :version, :ui]
+      if arguments.last.is_a?(Hash)
+        options = Hash[keys.map { |o| [o, arguments.last.delete(o)] }]
+        arguments.pop if arguments.last.empty?
+      else
+        options = {}
+      end
+      options
+    end
+
     def jquery_file(path, version)
       path ||= 'jquery.js'
       version ||= JqueryTag.version

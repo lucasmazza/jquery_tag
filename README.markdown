@@ -32,4 +32,4 @@ To use the `jquery_tag` on your [Sinatra](http://www.sinatrarb.com/) application
       end
     end
 
-Just call the `jquery_tag` helper inside your views or layouts, as in the example above. Your local scripts should be located inside a `./public/javascript` folder (or whatever the Sinatra public path is configurated on your application).
+Just call the `jquery_tag` helper inside your views or layouts, as in the example above. Your local scripts should be located inside a `./public/javascripts/` folder (or whatever the Sinatra public path is configurated on your application).

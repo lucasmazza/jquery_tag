@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Lucas Mazza"]
   s.email       = ["luc4smazza@gmail.com"]
   s.homepage    = "http://rubygems.org/gems/jquery_tag"
-  s.summary     = "jQuery script tag helper for Rails"
+  s.summary     = "jQuery script tag helper for Rails and Sinatra"
   s.description = "Helper gem that toggles between local jquery script and Google CDN version based on your app environment"
 
   s.required_rubygems_version = ">= 1.3.6"

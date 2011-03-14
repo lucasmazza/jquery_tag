@@ -19,7 +19,7 @@ module JqueryTag # :nodoc:
     ## @param [Array] paths_or_urls The paths for the local files or the CDN urls.
     ## @param [Hash] options the current implementation doesn't use the options hash.
     ## @return [String] the concatenated html tags
-    def javascript_tag(paths_or_urls, options = {})
+    def create_javascript_tags(paths_or_urls, options = {})
       paths_or_urls.map { |path| build_tag(path) }.join
     end
 

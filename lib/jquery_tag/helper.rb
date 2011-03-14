@@ -19,7 +19,7 @@ module JqueryTag # :nodoc:
   ## +jQueryTag::Helper+ relies on two other methods that should be implemented:
   ##
   ## * +production?+ - it should return +true+ if the application is on  production mode. Otherwise, false.
-  ## * +javascript_tag(paths, options)+ - responsible for building the tags for the given paths array. Any other option should be passed on the second argument, a options hash.
+  ## * +create_javascript_tags(paths, options)+ - responsible for building the tags for the given paths array. Any other option should be passed on the second argument, a options hash.
   module Helper
 
     ## Builds the proper script tags for a suitable url or path for both jQuery or jQuery UI scripts.
@@ -27,7 +27,7 @@ module JqueryTag # :nodoc:
     ## @option :file [String] an alternative path for the local jquery.js file. Defaults to `jquery.js`
     ## @option :version [String] tells the helper to target a different version of jQuery hosted on Google's CDN. Defaults to JqueryTag.version
     ## @option :ui [String, TrueClass] loads the jQuery UI File. Can be a [TrueClass] or a [String], overriding the local path for the script.
-    ## Any other argument will be delivered to the +javascript_tag+ method.
+    ## Any other argument will be delivered to the +create_javascript_tags+ method.
     ##
     ## @return [String] the html tags to include scripts
     def jquery_tag(*arguments)
@@ -36,7 +36,7 @@ module JqueryTag # :nodoc:
       paths << jquery_file(options[:file], options[:version])
       paths << jquery_ui_file(options[:ui]) if options[:ui]
 
-      javascript_tag(paths, arguments)
+      create_javascript_tags(paths, arguments)
     end
 
     private

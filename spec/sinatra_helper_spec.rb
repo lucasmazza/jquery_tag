@@ -33,7 +33,7 @@ describe JqueryTag::SinatraHelper do
     before { production! }
 
     it "uses the google CDN path" do
-      expected = %Q{<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>}
+      expected = %Q{<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>}
       jquery_tag.should == expected
     end
 
@@ -43,8 +43,8 @@ describe JqueryTag::SinatraHelper do
     end
 
     it "uses the google CDN path for the jquery ui script" do
-      expected = %Q{<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>}
-      expected << %Q{<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>}
+      expected = %Q{<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>}
+      expected << %Q{<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>}
       jquery_tag(:ui => true).should == expected
     end
   end

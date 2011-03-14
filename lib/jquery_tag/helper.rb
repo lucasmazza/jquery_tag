@@ -12,7 +12,7 @@ module JqueryTag # :nodoc:
   ##  <script type="text/javascript" src="/javascripts/jquery.js"></script>
   ## Your application will be using a local version of jQuery, avoiding any network usage. Once you
   ## shift to production mode, the ouput will be:
-  ##  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+  ##  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   ## Reducing your server bandwidth load and sharing the same cached file from many other sites.
   ##
   ## == Dependencies

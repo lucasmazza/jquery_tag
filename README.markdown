@@ -16,7 +16,7 @@ Inside your views, you can just call the `jquery_tag` method.
 
 It accepts a some configuration options by using the following symbols:
 
-    :version          # Overrides the script version on the CDN URL. Defaults do '1.5.1'
+    :version          # Overrides the script version on the CDN URL. Defaults do '1.5.2'
     :file             # Path for the local script. Defaults do 'jquery.js'
     :ui               # Loads jQuery UI. Accepts a true value for loading a 'jquery-ui.js' file or a String for the local path.
 

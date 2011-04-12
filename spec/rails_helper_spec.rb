@@ -41,7 +41,7 @@ describe JqueryTag::RailsHelper do
     before { production! }
 
     it "uses the google CDN path" do
-      expects_include_with ['//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js']
+      expects_include_with ['//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js']
       jquery_tag
     end
 
@@ -51,7 +51,7 @@ describe JqueryTag::RailsHelper do
     end
 
     it "uses the google CDN path for the jquery ui script" do
-      expects_include_with ['//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js']
+      expects_include_with ['//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js']
       jquery_tag :ui => true
     end
   end

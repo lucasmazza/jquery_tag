@@ -19,9 +19,17 @@ module SpecHelper
     Rails.stub_chain(:env, :production?) { false }
   end
 
-  def expects_include_with(*args)
-    should_receive(:javascript_include_tag).with(*args)
+  def expects_includes_with(args)
+    opts = args.last.is_a?(Hash) ? args.pop : nil
+    args.each do |value|
+      arguments = [value, opts].compact.flatten
+      should_receive(:javascript_include_tag).with(*arguments)
+    end
   end
+end
+
+class String
+  def html_safe; self; end
 end
 
 RSpec.configure do |config|

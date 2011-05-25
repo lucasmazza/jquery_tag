@@ -15,8 +15,13 @@ module JqueryTag # :nodoc:
     ## @param [Hash] options any other option that should be delivered to +javascript_include_tag+.
     ## @return [String] the concatenated html tags
     def create_javascript_tags(paths_or_urls, options = {})
-      arguments = paths_or_urls + [options].flatten
-      javascript_include_tag(arguments)
+      arguments = [paths_or_urls, options].flatten
+      options = arguments.last.is_a?(Hash) ? arguments.pop : nil
+
+      arguments.map { |path_or_url|
+        arguments = [path_or_url, options].compact
+        javascript_include_tag(*arguments)
+      }.join.html_safe
     end
   end
 end

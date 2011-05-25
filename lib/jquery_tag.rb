@@ -4,9 +4,9 @@ require 'jquery_tag/helpers/sinatra_helper'
 
 module JqueryTag # :nodoc:
   ## @return [String] the current (mostly latest) version of jQuery.
-  def self.version;    '1.6.0'; end
+  def self.version;    '1.6.1'; end
   ## @return [String] the current (mostly latest) version of jQuery UI.
-  def self.ui_version; '1.8.12'; end
+  def self.ui_version; '1.8.13'; end
 end
 
 ActionView::Base.send(:include, JqueryTag::RailsHelper) if defined? Rails

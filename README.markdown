@@ -1,4 +1,8 @@
 # Jquery_tag
+
+[![Build Status](https://secure.travis-ci.org/lucasmazza/jquery_tag.png)](http://travis-ci.org/lucasmazza/jquery_tag)
+
+
 A Helper gem for both Rails and Sinatra for toggling between a local jquery.js file or the hosted script on Google's CDN based on your application environment, avoiding network dependency during development and bandwidth usage when your application goes live.
 It also supports the same behavior for a loading the jQuery UI script.
 

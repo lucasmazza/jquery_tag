@@ -12,7 +12,9 @@ To download the latest jQuery script to your application just run `jquery_tag` c
 ## Usage
 Inside your views, you can just call the `jquery_tag` method.
 
-    <%= jquery_tag %>
+```erb
+<%= jquery_tag %>
+```
 
 It accepts a some configuration options by using the following symbols:
 
@@ -25,12 +27,14 @@ Any other arguments will be passed along to the `javascript_include_tag` helper,
 ## Sinatra
 To use the `jquery_tag` on your [Sinatra](http://www.sinatrarb.com/) applications, just include the `JqueryTag::SinatraHelper` on your application
 
-    require 'jquery_tag' # if your not using Bundler.
+```ruby
+require 'jquery_tag' # if your not using Bundler.
 
-    class Application < Sinatra::Base
-      helpers do
-        include JqueryTag::SinatraHelper
-      end
-    end
+class Application < Sinatra::Base
+  helpers do
+    include JqueryTag::SinatraHelper
+  end
+end
+```
 
 Just call the `jquery_tag` helper inside your views or layouts, as in the example above. Your local scripts should be located inside a `./public/javascripts/` folder (or whatever the Sinatra public path is configured on your application).
